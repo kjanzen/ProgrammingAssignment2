@@ -1,13 +1,13 @@
 ## These functions work together caching the inverse of a matrix.
-"""
-1 - Create a squared matrix (M). Bear in mind that it has to be invertible.
-2 - Pass the matrix created in step one as an argument for makeCacheMatrix
-    and assign the result to a variable (C). This will return a list of functions.
-3 - Run the function cacheSolve using C as the argument. This will check if there
-    already is an inverse cached for M. If there is not, it will calculate the inverse,
-    store it, and return its value. If there is one already, it will retrieve it and return
-    its value as well.
-"""
+
+# 1 - Create a squared matrix (M). Bear in mind that it has to be invertible.
+# 2 - Pass the matrix created in step one as an argument for makeCacheMatrix
+#     and assign the result to a variable (C). This will return a list of functions.
+# 3 - Run the function cacheSolve using C as the argument. This will check if there
+#     already is an inverse cached for M. If there is not, it will calculate the inverse,
+#     store it, and return its value. If there is one already, it will retrieve it and return
+#     its value as well.
+
 
 ## This function initializes the variables needed to store the cached values of an invertible matrix
 ## and creates the methods required to set/change the matrix, retrieve the matrix, set its inverse
@@ -53,14 +53,12 @@ cacheSolve <- function(x, ...) {
 # C <- makeCacheMatrix(M)
 # cacheSolve(C)
 
-""" Outputs:
+## Outputs:
 
-     [,1] [,2] [,3]
-[1,]  -24   18    5
-[2,]   20  -15   -4
-[3,]   -5    4    1
-
-"""
+#      [,1] [,2] [,3]
+# [1,]  -24   18    5
+# [2,]   20  -15   -4
+# [3,]   -5    4    1
 
 ## You can now use getsolve() to access the cached value
 # C$getsolve()
@@ -70,12 +68,10 @@ cacheSolve <- function(x, ...) {
 # C$set(matrix(1:4, 2, 2))
 # cacheSolve(C)
 
-""" Outputs:
+## Outputs:
 
-> cacheSolve(C)
-     [,1] [,2]
-[1,]   -2  1.5
-[2,]    1 -0.5
+#      [,1] [,2]
+# [1,]   -2  1.5
+# [2,]    1 -0.5
 
-"""
 
